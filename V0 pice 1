@@ -1,0 +1,414 @@
+
+Action: read({"request":[{"path":"/app/design_guidelines.json"},{"path":"/app/frontend/src/index.css"},{"path":"/app/backend/lib/db.py"},{"path":"/app/frontend/src/lib/api.js"}]})
+Observation: ===FILE: /app/design_guidelines.json
+/app/design_guidelines.json:
+1|{
+2|  "app_name": "DealDrive",
+3|  "theme_strategy": "Precision Performance Dark & Slate High-Contrast (Modern Automotive Tech with Tactical Minimalism)",
+4|  "colors": {
+5|    "surfaces": [
+6|      {
+7|        "name": "page",
+8|        "kind": "solid",
+9|        "bg": "#0B0F17",
+10|        "on_bg": "#F1F5F9",
+11|        "on_bg_muted": "#94A3B8"
+12|      },
+13|      {
+14|        "name": "card",
+15|        "kind": "solid",
+16|        "bg": "#111827",
+17|        "on_bg": "#F9FAFB",
+18|        "on_bg_muted": "#9CA3AF"
+19|      },
+20|      {
+21|        "name": "card_subtle",
+22|        "kind": "solid",
+23|        "bg": "#1E293B",
+24|        "on_bg": "#FFFFFF",
+25|        "on_bg_muted": "#94A3B8"
+26|      },
+27|      {
+28|        "name": "panel_elevated",
+29|        "kind": "solid",
+30|        "bg": "#161F30",
+31|        "on_bg": "#FFFFFF",
+32|        "on_bg_muted": "#94A3B8"
+33|      },
+34|      {
+35|        "name": "hero",
+36|        "kind": "image",
+37|        "contrast_against": "#080C14",
+38|        "guarantee": "scrim: linear-gradient(to bottom, rgba(11,15,23,0.88), rgba(11,15,23,0.96))",
+39|        "on_bg": "#F8FAFC",
+40|        "on_bg_muted": "#94A3B8",
+41|        "roles": {
+42|          "accent": "#FF5722",
+43|          "link": "#38BDF8",
+44|          "success": "#10B981",
+45|          "error": "#EF4444"
+46|        }
+47|      },
+48|      {
+49|        "name": "deal_breakdown_surface",
+50|        "kind": "solid",
+51|        "bg": "#0D1524",
+52|        "on_bg": "#F8FAFC",
+53|        "on_bg_muted": "#A0AEC0"
+54|      },
+55|      {
+56|        "name": "negotiation_thread_surface",
+57|        "kind": "solid",
+58|        "bg": "#0F172A",
+59|        "on_bg": "#F8FAFC",
+60|        "on_bg_muted": "#94A3B8"
+61|      },
+62|      {
+63|        "name": "tag_pill_accent",
+64|        "kind": "solid",
+65|        "bg": "#2A1810",
+66|        "on_bg": "#FF8A65",
+67|        "on_bg_muted": "#FF7043"
+68|      },
+69|      {
+70|        "name": "tag_pill_match",
+71|        "kind": "solid",
+72|        "bg": "#064E3B",
+73|        "on_bg": "#34D399",
+74|        "on_bg_muted": "#6EE7B7"
+75|      }
+76|    ],
+77|    "accent": "#FF5722",
+78|    "on_accent": "#FFFFFF",
+79|    "secondary_accent": "#38BDF8",
+80|    "on_secondary_accent": "#031525",
+81|    "border_color": "#233044",
+82|    "border_highlight": "#374151"
+83|  },
+84|  "typography": {
+85|    "font_heading": "'Sora Variable', sans-serif",
+86|    "font_body": "'DM Sans Variable', sans-serif",
+87|    "font_mono": "'JetBrains Mono Variable', monospace",
+88|    "import_statements": [
+89|      "@import '@fontsource-variable/sora';",
+90|      "@import '@fontsource-variable/dm-sans';",
+91|      "@import '@fontsource-variable/jetbrains-mono';"
+92|    ],
+93|    "scale_px": {
+94|      "display": 56,
+95|      "h1": 44,
+96|      "h2": 32,
+97|      "h3": 24,
+98|      "h4": 20,
+99|      "body": 16,
+100|      "caption": 14
+101|    }
+102|  },
+103|  "entry_surfaces": {
+104|    "/": "split & asymmetric bento hero — NL vehicle query search prompt and prompt pill tags on top, sample matching trucks grid with live match scoring and Build Deal action below",
+105|    "/deal/:vehicleId": "split desking view — vehicle specifications & photo showcase left, dynamic deal structure calculator and trade module right",
+106|    "/negotiate/:dealId": "two-column interactive negotiation command center — live deal transcript with AI simulated dealer responses left, sticky action deck (counter, accept, decline) right",
+107|    "/garage": "bento vehicle asset deck — equity and valuation tracker top, maintenance/mileage update card and 'Shop with this Trade' action bottom",
+108|    "/dealer": "high-density desking cockpit — incoming deal queue with status badges, live dealer controls, and fast take-over trigger",
+109|    "/dealer/settings": "rules matrix panel — dealership-wide discount authority, floor limits, and per-VIN override table"
+110|  },
+111|  "layouts": {
+112|    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+113|    "header_height": "h-16",
+114|    "bento_gap": "gap-6",
+115|    "spacing_philosophy": "Generous tactical spacing with strict 1px high-contrast borders (#233044) and subtle rounded corners (rounded-xl)"
+116|  },
+117|  "visual_enhancers": {
+118|    "tactical_badges": "High contrast status indicators with subtle border glows (e.g., '96% Match', 'AI Negotiating', 'Dealer Counter')",
+119|    "dynamic_otd_summary": "Sticky bottom bar on mobile or sticky sidebar on desktop showing real-time recalculated Out-The-Door (OTD) pricing",
+120|    "ai_negotiation_ticker": "Simulated typing indicator with realistic latency and conversational dealer counteroffers with dealer rule engine behind the scenes"
+121|  },
+122|  "media": {
+123|    "image_urls": [
+124|      {
+125|        "category": "hero_gmc_truck",
+126|        "description": "Black GMC Sierra 1500 Denali Pickup Truck",
+127|        "url": "https://images.unsplash.com/photo-1601252300554-4ad551483bd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBwaWNrdXAlMjB0cnVja3xlbnwwfHx8fDE3ODg5OTkxODJ8MA&ixlib=rb-4.1.0&q=85"
+128|      },
+129|      {
+130|        "category": "ram_truck",
+131|        "description": "Silver RAM 1500 Limited Pickup Truck",
+132|        "url": "https://images.unsplash.com/photo-1649793395985-967862a3b73f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwaWNrdXAlMjB0cnVja3xlbnwwfHx8fDE3ODg5OTkxODJ8MA&ixlib=rb-4.1.0&q=85"
+133|      },
+134|      {
+135|        "category": "ford_truck",
+136|        "description": "Red Ford F-150 Lariat Pickup Truck",
+137|        "url": "https://images.unsplash.com/photo-1624339024061-b435d9261c1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBwaWNrdXAlMjB0cnVja3xlbnwwfHx8fDE3ODg5OTkxODJ8MA&ixlib=rb-4.1.0&q=85"
+138|      },
+139|      {
+140|        "category": "toyota_truck",
+141|        "description": "Brown Toyota Tundra 1794 Edition Pickup Truck",
+142|        "url": "https://images.unsplash.com/photo-1605504835488-e8c6d37beb43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBwaWNrdXAlMjB0cnVja3xlbnwwfHx8fDE3ODg5OTkxODJ8MA&ixlib=rb-4.1.0&q=85"
+143|      },
+144|      {
+145|        "category": "interior_luxury",
+146|        "description": "Modern automotive cockpit dashboard and digital display",
+147|        "url": "https://images.unsplash.com/photo-1661336878257-1c51b5af959a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBjYXIlMjBkYXNoYm9hcmQlMjBkZWFsZXJzaGlwfGVufDB8fHx8MTc4ODk5OTE4Mnww&ixlib=rb-4.1.0&q=85"
+148|      }
+149|    ]
+150|  },
+151|  "motion": {
+152|    "hover_transition": "transition-transform duration-200 ease-out hover:-translate-y-1",
+153|    "card_border_glow": "hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/5",
+154|    "message_bubble_in": "animate-in fade-in slide-in-from-bottom-2 duration-300"
+155|  },
+156|  "accessibility": {
+157|    "contrast_standard": "WCAG AA (APCA compliant)",
+158|    "min_contrast_ratio": "4.5:1 for body copy against all surfaces, 3:1 for large headers",
+159|    "interactive_targets": "Minimum 44px by 44px clickable areas for buttons and toggles",
+160|    "data_testids": "Strict kebab-case role-based identifiers on every actionable and status node"
+161|  },
+162|  "instructions_to_main_agent": [
+163|    "1. Role Switcher: Implement a global header switcher (toggle/pills) to flip between 'Consumer Experience' and 'Dealer Experience' anytime with active badge.",
+164|    "2. Natural Language Vehicle Search: Provide the search box with preset prompts ('GMC Denali 1500', 'Ford F-150 hybrid under 50k', 'Toyota Tundra crew cab'). When 'GMC Denali 1500' is submitted, explicitly highlight 'Interpreted as GMC Sierra 1500 Denali (98% match)'.",
+165|    "3. Four Matching Trucks: Render GMC Sierra 1500 Denali, Ford F-150 Lariat, Ram 1500 Limited, and Toyota Tundra 1794 with Match %, Selling Price, Mileage, Distance, Key Features tags, and 'Build Deal' CTA button.",
+166|    "4. Build Deal flow: Real-time math breakdown showing Selling Price, Manufacturer Incentives (-$3,250), Dealer Doc Fee ($699), Estimated Tax/Title (e.g. 7.5%), and OTD Total. Allow down payment adjustment.",
+167|    "5. Add Trade-in Module: VIN input (with auto-populate button or sample VINs), Year/Make/Model, Mileage, Estimated Payoff, Condition selector (Excellent, Clean, Fair), photo upload placeholders, dynamic trade valuation estimate ($32,000 - $35,500), and auto-calculated positive or negative equity applied directly to the deal.",
+168|    "6. AI Negotiation Simulation: Customer enters offer price. Trigger dynamic AI negotiation responses based on dealer rules. Dealer rules include Advertised Price, AI Discount Authority, Manager Approval threshold, and Hard Floor. Provide simulated dealer counteroffer messages with 'Accept Deal', 'Counter Again', and 'Decline Deal' options.",
+169|    "7. Deal Accepted + Appointment Booking: Once deal is accepted, show confirmation celebration state, summary deal sheet, and interactive test drive/delivery appointment scheduler (calendar date, time slots, dealer address).",
+170|    "8. My Garage: Add purchased or trade vehicle to 'My Garage' showing Current Market Value, Loan Payoff, Net Equity gauge, 'Update Mileage' modal, 'Refresh Value' calculation, and 'Shop With This Trade' button jumping into search with pre-loaded equity.",
+171|    "9. Dealer Portal: Dashboard with incoming customer deals, Deal status badges (Pending AI, Customer Countered, Manager Review, Accepted, Closed), Deal Detail view with customer offer, trade valuation, profit breakdown, and action buttons: 'Accept', 'Counter', 'Decline', 'Take Over (Direct Desking)'.",
+172|    "10. Dealer Negotiation Settings: Dealer Settings page with sliders and inputs for Default AI Discount Authority ($), Manager Threshold ($), Hard Floor ($), Max Deviation (%), plus a per-VIN/Vehicle override table allowing custom rules on high-demand trucks.",
+173|    "11. All interactive elements MUST have explicit data-testid attributes (e.g. data-testid='nl-search-input', data-testid='build-deal-btn-1', data-testid='submit-offer-btn', data-testid='accept-deal-btn', data-testid='role-switcher-dealer')."
+174|  ],
+175|  "component_paths": {
+176|    "header": "/app/frontend/src/components/Navbar.jsx",
+177|    "search_hero": "/app/frontend/src/components/SearchHero.jsx",
+178|    "vehicle_card": "/app/frontend/src/components/VehicleCard.jsx",
+179|    "deal_builder": "/app/frontend/src/components/DealBuilder.jsx",
+180|    "trade_in_modal": "/app/frontend/src/components/TradeInModal.jsx",
+181|    "negotiation_chat": "/app/frontend/src/components/NegotiationChat.jsx",
+182|    "appointment_scheduler": "/app/frontend/src/components/AppointmentScheduler.jsx",
+183|    "garage_view": "/app/frontend/src/pages/Garage.jsx",
+184|    "dealer_dashboard": "/app/frontend/src/pages/DealerDashboard.jsx",
+185|    "dealer_settings": "/app/frontend/src/pages/DealerSettings.jsx"
+186|  }
+187|}
+
+===END
+
+===FILE: /app/frontend/src/index.css
+/app/frontend/src/index.css:
+1|@import "tailwindcss";
+2|@import "tw-animate-css";
+3|@import "shadcn/tailwind.css";
+4|@import "@fontsource-variable/geist";
+5|
+6|@custom-variant dark (&:is(.dark *));
+7|
+8|@theme inline {
+9|    --font-heading: var(--font-sans);
+10|    --font-sans: 'Geist Variable', sans-serif;
+11|    --color-sidebar-ring: var(--sidebar-ring);
+12|    --color-sidebar-border: var(--sidebar-border);
+13|    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+14|    --color-sidebar-accent: var(--sidebar-accent);
+15|    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+16|    --color-sidebar-primary: var(--sidebar-primary);
+17|    --color-sidebar-foreground: var(--sidebar-foreground);
+18|    --color-sidebar: var(--sidebar);
+19|    --color-chart-5: var(--chart-5);
+20|    --color-chart-4: var(--chart-4);
+21|    --color-chart-3: var(--chart-3);
+22|    --color-chart-2: var(--chart-2);
+23|    --color-chart-1: var(--chart-1);
+24|    --color-ring: var(--ring);
+25|    --color-input: var(--input);
+26|    --color-border: var(--border);
+27|    --color-destructive: var(--destructive);
+28|    --color-accent-foreground: var(--accent-foreground);
+29|    --color-accent: var(--accent);
+30|    --color-muted-foreground: var(--muted-foreground);
+31|    --color-muted: var(--muted);
+32|    --color-secondary-foreground: var(--secondary-foreground);
+33|    --color-secondary: var(--secondary);
+34|    --color-primary-foreground: var(--primary-foreground);
+35|    --color-primary: var(--primary);
+36|    --color-popover-foreground: var(--popover-foreground);
+37|    --color-popover: var(--popover);
+38|    --color-card-foreground: var(--card-foreground);
+39|    --color-card: var(--card);
+40|    --color-foreground: var(--foreground);
+41|    --color-background: var(--background);
+42|    --radius-sm: calc(var(--radius) * 0.6);
+43|    --radius-md: calc(var(--radius) * 0.8);
+44|    --radius-lg: var(--radius);
+45|    --radius-xl: calc(var(--radius) * 1.4);
+46|    --radius-2xl: calc(var(--radius) * 1.8);
+47|    --radius-3xl: calc(var(--radius) * 2.2);
+48|    --radius-4xl: calc(var(--radius) * 2.6);
+49|}
+50|
+51|:root {
+52|    --background: oklch(1 0 0);
+53|    --foreground: oklch(0.145 0 0);
+54|    --card: oklch(1 0 0);
+55|    --card-foreground: oklch(0.145 0 0);
+56|    --popover: oklch(1 0 0);
+57|    --popover-foreground: oklch(0.145 0 0);
+58|    --primary: oklch(0.205 0 0);
+59|    --primary-foreground: oklch(0.985 0 0);
+60|    --secondary: oklch(0.97 0 0);
+61|    --secondary-foreground: oklch(0.205 0 0);
+62|    --muted: oklch(0.97 0 0);
+63|    --muted-foreground: oklch(0.556 0 0);
+64|    --accent: oklch(0.97 0 0);
+65|    --accent-foreground: oklch(0.205 0 0);
+66|    --destructive: oklch(0.577 0.245 27.325);
+67|    --border: oklch(0.922 0 0);
+68|    --input: oklch(0.922 0 0);
+69|    --ring: oklch(0.708 0 0);
+70|    --chart-1: oklch(0.87 0 0);
+71|    --chart-2: oklch(0.556 0 0);
+72|    --chart-3: oklch(0.439 0 0);
+73|    --chart-4: oklch(0.371 0 0);
+74|    --chart-5: oklch(0.269 0 0);
+75|    --radius: 0.625rem;
+76|    --sidebar: oklch(0.985 0 0);
+77|    --sidebar-foreground: oklch(0.145 0 0);
+78|    --sidebar-primary: oklch(0.205 0 0);
+79|    --sidebar-primary-foreground: oklch(0.985 0 0);
+80|    --sidebar-accent: oklch(0.97 0 0);
+81|    --sidebar-accent-foreground: oklch(0.205 0 0);
+82|    --sidebar-border: oklch(0.922 0 0);
+83|    --sidebar-ring: oklch(0.708 0 0);
+84|}
+85|
+86|.dark {
+87|    --background: oklch(0.145 0 0);
+88|    --foreground: oklch(0.985 0 0);
+89|    --card: oklch(0.205 0 0);
+90|    --card-foreground: oklch(0.985 0 0);
+91|    --popover: oklch(0.205 0 0);
+92|    --popover-foreground: oklch(0.985 0 0);
+93|    --primary: oklch(0.922 0 0);
+94|    --primary-foreground: oklch(0.205 0 0);
+95|    --secondary: oklch(0.269 0 0);
+96|    --secondary-foreground: oklch(0.985 0 0);
+97|    --muted: oklch(0.269 0 0);
+98|    --muted-foreground: oklch(0.708 0 0);
+99|    --accent: oklch(0.269 0 0);
+100|    --accent-foreground: oklch(0.985 0 0);
+101|    --destructive: oklch(0.704 0.191 22.216);
+102|    --border: oklch(1 0 0 / 10%);
+103|    --input: oklch(1 0 0 / 15%);
+104|    --ring: oklch(0.556 0 0);
+105|    --chart-1: oklch(0.87 0 0);
+106|    --chart-2: oklch(0.556 0 0);
+107|    --chart-3: oklch(0.439 0 0);
+108|    --chart-4: oklch(0.371 0 0);
+109|    --chart-5: oklch(0.269 0 0);
+110|    --sidebar: oklch(0.205 0 0);
+111|    --sidebar-foreground: oklch(0.985 0 0);
+112|    --sidebar-primary: oklch(0.488 0.243 264.376);
+113|    --sidebar-primary-foreground: oklch(0.985 0 0);
+114|    --sidebar-accent: oklch(0.269 0 0);
+115|    --sidebar-accent-foreground: oklch(0.985 0 0);
+116|    --sidebar-border: oklch(1 0 0 / 10%);
+117|    --sidebar-ring: oklch(0.556 0 0);
+118|}
+119|
+120|@layer base {
+121|  * {
+122|    @apply border-border outline-ring/50;
+123|    }
+124|  body {
+125|    @apply bg-background text-foreground;
+126|    }
+127|  html {
+128|    @apply font-sans;
+129|    }
+130|}
+131|
+
+===END
+
+===FILE: /app/backend/lib/db.py
+/app/backend/lib/db.py:
+1|"""Shared Mongo handle — import `client`/`db` from here (server.py, routers, seed.py)."""
+2|
+3|import logging
+4|import os
+5|from pathlib import Path
+6|
+7|from dotenv import load_dotenv
+8|from motor.motor_asyncio import AsyncIOMotorClient
+9|from pymongo import ASCENDING, DESCENDING, IndexModel
+10|
+11|load_dotenv(Path(__file__).parent.parent / ".env")
+12|
+13|mongo_url = os.environ["MONGO_URL"]
+14|client = AsyncIOMotorClient(mongo_url)
+15|db = client[os.environ["DB_NAME"]]
+16|
+17|logger = logging.getLogger(__name__)
+18|
+19|# One entry per collection: every field a route filters, sorts, or dedupes on. Applied by ensure_indexes() at startup.
+20|INDEXES: dict[str, list[IndexModel]] = {
+21|    "status_checks": [IndexModel([("timestamp", DESCENDING)], name="timestamp_desc")],
+22|}
+23|
+24|
+25|async def ensure_indexes() -> None:
+26|    for collection, models in INDEXES.items():
+27|        for model in models:  # one at a time so a bad spec skips only itself
+28|            try:
+29|                await db[collection].create_indexes([model])
+30|            except Exception as exc:  # never block boot on an index; the log line names what to fix
+31|                logger.error("ensure_indexes(%s.%s): %s", collection, model.document["name"], exc)
+32|
+
+===END
+
+===FILE: /app/frontend/src/lib/api.js
+/app/frontend/src/lib/api.js:
+1|// Fetch layer over the FastAPI backend. Base is the relative "/api" prefix so the
+2|// same code works in dev (Vite proxies /api → :8001) and behind a single origin in prod.
+3|const BASE = "/api";
+4|
+5|export class ApiError extends Error {
+6|  status;
+7|  body;
+8|  constructor(status, body) {
+9|    super(`request failed with ${status}`);
+10|    this.name = "ApiError";
+11|    this.status = status;
+12|    this.body = body;
+13|  }
+14|}
+15|async function request(method, path, body) {
+16|  // Auth rides the httpOnly session cookie automatically — never add auth headers here.
+17|  const res = await fetch(`${BASE}${path}`, {
+18|    method,
+19|    headers:
+20|      body === undefined
+21|        ? undefined
+22|        : {
+23|            "Content-Type": "application/json",
+24|          },
+25|    body: body === undefined ? undefined : JSON.stringify(body),
+26|  });
+27|
+28|  // FastAPI reports request-validation failures as 422 with a {detail: [...]} body.
+29|  if (!res.ok) {
+30|    const errBody = await res.json().catch(() => null);
+31|    throw new ApiError(res.status, errBody);
+32|  }
+33|  if (res.status === 204) return undefined;
+34|  return await res.json();
+35|}
+36|
+37|// Runtime response-shape assertions belong in tests when an endpoint contract matters.
+38|export const apiGet = (path) => request("GET", path);
+39|export const apiPost = (path, body) => request("POST", path, body ?? null);
+40|export const apiPut = (path, body) => request("PUT", path, body ?? null);
+41|export const apiPatch = (path, body) => request("PATCH", path, body ?? null);
+42|export const apiDelete = (path) => request("DELETE", path);
+43|
+
+===END
